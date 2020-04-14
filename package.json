@@ -1,0 +1,14 @@
+{
+    "id": "exchange-owa",
+    "name": "MS Excahnge OWA",
+    "version": "1.0.0",
+    "description": "On-Premise MS Exchange 2010/2013 Outlook Web App",
+    "main": "index.js",
+    "author": "George Murdocca <george@linuxdojo.com>",
+    "repository": "",
+    "license": "MIT",
+    "config": {
+        "hasCustomUrl": "true",
+        "hasNotificationSound": "true"
+    }
+}
