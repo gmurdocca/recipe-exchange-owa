@@ -2,8 +2,14 @@
 
 module.exports = Franz => {
   const getMessages = function getMessages() {
-    const unreadMail = parseInt(jQuery("span[title*='Inbox'] + span + span").first().text(), 10);
-    Franz.setBadge(unreadMail);
+    const login = document.querySelectorAll('div .signInImageHeader').length;
+    if (login == "0") {
+      const messageCount = parseInt(jQuery("span[title*='Inbox'] + span + span").first().text(), 10);
+      Franz.setBadge(messageCount);
+    }
+    else {
+      Franz.setBadge(login);
+    }
   };
   Franz.loop(getMessages);
 };
